@@ -2,10 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /**
- *main - print if
- *
- *Return 0
+ * main - Entry point
+ * Return: Always EXIT_SUCCESS
  */
+
 int main(void)
 {
 int n;
