@@ -1,24 +1,37 @@
 #include "main.h"
 /**
- *times_table - tabla de multiplicar del 0 al 9
- *
+ * times_table - Print 9 timas table.
+ * Return: void function
  */
 void times_table(void)
 {
-int a, b, r;
+int n1, n2;
 
-for (a = 0; a <= 9; a++)
+for (n1 = 0; n1 <= 9; n1++)
 {
-for (b = 0; b <= 9; b++)
+for (n2 = 0; n2 <= 9; n2++)
 {
-r = a * b;
-if (r > 9)
-_putchar ((r / 10) + '0');
-_putchar ((r % 10) + '0');
-if (b < 9)
-_putchar(',');
-if (a < 9)
+if (n1 * n2 <= 9)
+{
+_putchar(48 + n1 * n2);
 }
-_putchar('\n');
+else
+{
+_putchar(48 + n1 * n2 / 10);
+_putchar(48 + n1 * n2 % 10);
+}
+if (n2 < 9)
+{
+_putchar(44);
+if (n1 * (n2 + 1) < 10)
+{
+_putchar(32);
+_putchar(32);
+}
+else
+_putchar(32);
+}
+}
+_putchar(10);
 }
 }
